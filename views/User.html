@@ -1,0 +1,13 @@
+{{ define "User" }}
+  {{ template "Header" }}
+    <title>User</title>
+  </head>
+  <body> 
+    <h1>Halo, {{ .name }}</h1>
+    <h3>{{ .message }}</h3>
+    {{ template "Menu" }}
+      <li><a href="/user">User</a></li>
+      <li><a href="/user/logout">Logout</a></li>
+  </ul>
+  {{ template "Footer" }}
+{{ end }}

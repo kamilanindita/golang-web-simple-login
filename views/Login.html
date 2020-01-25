@@ -1,0 +1,24 @@
+{{ define "Login" }}
+  {{ template "Header" }}
+    <title>Login</title>
+  </head>
+  <body>  
+    {{ template "Menu" }}
+        <li><a href="/user/register">Register</a></li>
+    </ul>
+	<h1>Login Page</h1>
+    <form method="POST" action="/user/login">
+        <table>
+            <tr>
+                <td>Email</td>
+                <td>:&nbsp;<input type="email" name="email"/></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>:&nbsp;<input type="password" name="password"/></td>
+            </tr>
+        </table>
+        <button type="submit">Login</button>
+    </form>
+    {{ template "Footer" }}
+{{ end }}

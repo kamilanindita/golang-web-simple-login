@@ -1,0 +1,29 @@
+{{ define "Register" }}
+  {{ template "Header" }}
+    <title>Register</title>
+  </head>
+  <body>  
+    {{ template "Menu" }}
+        <li><a href="/user/login">Login</a></li>
+    </ul>
+	<h1>Registration Page</h1>
+    <form method="POST" action="/user/register">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>:&nbsp;<input type="text" name="name"/></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>:&nbsp;<input type="email" name="email"/></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>:&nbsp;<input type="password" name="password"/></td>
+            </tr>
+        </table>
+        <button type="submit">Register</button>
+    </form>
+    {{ template "Footer" }}
+{{ end }} 
+
